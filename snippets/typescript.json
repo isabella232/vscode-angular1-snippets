@@ -37,6 +37,27 @@
 			"}"
 		]
 	},
+    "Angular Component": {
+		"prefix": "ng1component",
+		"body": [
+			"namespace ${module} {",
+			"\t'use strict';",
+			"",
+			"\texport interface I${componentName} {",
+			"\t}",
+			"\tconst ${componentName}: ng.IComponentOptions = {",
+			"\t\tbindings: {},",
+			"\t\tcontroller: ${controllerCtrl},",
+			"\t\ttemplateUrl: 'path/to/template.html'," ,
+			"\t\ttransclude: true",
+			"\t};",
+            "",
+			"\tangular",
+			"\t\t.module('${module}')",
+			"\t\t.component('${componentName}', ${componentName});",
+			"}"
+		]
+	},
 	"Angular Module": {
 		"prefix": "ng1module",
 		"body": [
