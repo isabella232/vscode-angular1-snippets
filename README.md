@@ -1,4 +1,4 @@
-# Angular 1 JavaScript and TypeScript Snippets for VS Code
+# Wymsee's Angular 1 JavaScript and TypeScript Snippets for VS Code
 
 This extension for Visual Studio Code adds snippets for Angular 1 for JavaScript and TypeScript.
 
@@ -9,6 +9,7 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 
 ```javascript
 ng1controller // creates an Angular controller
+ng1component // creates an Angular component (requires Angular > 1.5)
 ng1directive  // creates an Angular directive
 ng1factory    // creates an Angular factory
 ng1module     // creates an Angular module
