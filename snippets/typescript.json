@@ -2,7 +2,7 @@
 	"Angular Controller": {
 		"prefix": "ng1controller",
 		"body": [
-			"namespace ${module} {",
+			"namespace app.${module} {",
 			"\t'use strict';",
 			"",
 			"\texport class ${Controller}Controller {",
@@ -12,15 +12,37 @@
 			"\t}",
 			"",
 			"\tangular",
-			"\t\t.module('${Module}')",
+			"\t\t.module('app.${module}')",
 			"\t\t.controller('${Controller}Controller', ${Controller}Controller);",
-			"}"
+			"}",
+            ""
+		]
+	},
+    "Angular Component Controller": {
+		"prefix": "ng1componentcontroller",
+		"body": [
+			"namespace app.${module} {",
+			"\t'use strict';",
+			"",
+            "\texport interface I${Controller}ComponentController extends I${Component}Bindings {",
+			"\t}",
+			"\texport class ${Controller}Controller implements I${Controller}ComponentController {",
+			"\t\tstatic $inject: Array<string> = ['${dependency1}'];",
+			"\t\tconstructor(private ${dependency1}: ${dependency1Type}) {}",
+			"",
+			"\t}",
+			"",
+			"\tangular",
+			"\t\t.module('app.${module}')",
+			"\t\t.controller('${Controller}Controller', ${Controller}Controller);",
+			"}",
+            ""
 		]
 	},
 	"Angular Service": {
 		"prefix": "ng1service",
 		"body": [
-			"namespace ${module} {",
+			"namespace app.${module} {",
 			"\t'use strict';",
 			"",
 			"\texport interface I${Service} {",
@@ -32,42 +54,48 @@
 			"\t}",
 			"",
 			"\tangular",
-			"\t\t.module('${Module}')",
+			"\t\t.module('app.${module}')",
 			"\t\t.service('${Service}', ${Service});",
-			"}"
+			"}",
+            ""
 		]
 	},
     "Angular Component": {
 		"prefix": "ng1component",
 		"body": [
-			"namespace ${module} {",
+			"namespace app.${module} {",
 			"\t'use strict';",
 			"",
-			"\texport interface I${componentName} {",
+			"\texport interface I${1:Component}Bindings {",
+            "\t\t${binding1}: ${string};",
 			"\t}",
-			"\tconst ${componentName}: ng.IComponentOptions = {",
-			"\t\tbindings: {},",
-			"\t\tcontroller: ${controllerCtrl},",
-			"\t\ttemplateUrl: 'path/to/template.html'," ,
+			"\tconst ${1:component}: ng.IComponentOptions = {",
+			"\t\tbindings: {",
+            "\t\t\t${binding1}: '${@}'",
+            "\t\t},",
+			"\t\tcontroller: '${controllerCtrl}',",
+			"\t\ttemplateUrl: '${path/to/template.html}'," ,
 			"\t\ttransclude: true",
 			"\t};",
             "",
 			"\tangular",
-			"\t\t.module('${module}')",
-			"\t\t.component('${componentName}', ${componentName});",
-			"}"
+			"\t\t.module('app.${module}')",
+			"\t\t.component('${1:component}', ${1:component});",
+			"}",
+            ""
 		]
 	},
 	"Angular Module": {
 		"prefix": "ng1module",
 		"body": [
-			"namespace ${module} {",
+			"namespace app.${module} {",
 			"\t'use strict';",
 			"",
-			"\tangular.module('${module}', [",
+			"\tangular.module('app.${module}', [",
 			"\t\t$0",
 			"\t]);",
-			"}"
+			"}",
+            ""
 		]
 	}
 }

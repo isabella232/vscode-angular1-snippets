@@ -10,6 +10,7 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 ```javascript
 ng1controller // creates an Angular controller
 ng1component // creates an Angular component (requires Angular > 1.5)
+ng1componentcontroller // creates an Angular controller for use with components
 ng1directive  // creates an Angular directive
 ng1factory    // creates an Angular factory
 ng1module     // creates an Angular module
