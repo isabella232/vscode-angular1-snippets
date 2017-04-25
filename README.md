@@ -10,13 +10,14 @@ This extension for Visual Studio Code adds snippets for Angular 1 for JavaScript
 Type part of a snippet, press `enter`, and the snippet unfolds.
 
 ```javascript
-ng1controller // creates an Angular controller
 ng1component // creates an Angular component (requires Angular > 1.5)
 ng1componentcontroller // creates an Angular controller for use with components
+ng1controller // creates an Angular controller
 ng1directive  // creates an Angular directive
 ng1factory    // creates an Angular factory
 ng1module     // creates an Angular module
 ng1service    // creates an Angular service
+ng1filter     // creates an Angular filter
 ```
 
 Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
