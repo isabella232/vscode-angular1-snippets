@@ -1,5 +1,7 @@
 # Wymsee's Angular 1 JavaScript and TypeScript Snippets for VS Code
 
+Fork of [John Papa's Angular 1 JavaScript and TypeScript Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular1), with added components for Typescript and modified slightly for our prefered style.
+
 This extension for Visual Studio Code adds snippets for Angular 1 for JavaScript and TypeScript.
 
 ![Use Extension](images/use-extension.gif)
